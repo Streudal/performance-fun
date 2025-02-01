@@ -5,7 +5,7 @@ In all seriousness, this is all about learning Deno and having some fun with the
 
 ## Setup 
 1. Install [Deno](https://docs.deno.com/runtime/).
-2. Install the Deno extension by denoland (VSCode or Cursor IDEs).
+2. Install the [Deno extension](https://marketplace.visualstudio.com/items?itemName=denoland.vscode-deno) by denoland (VSCode or Cursor IDEs).
 3. Clone this repo (if you haven't already).
 4. Go to your files and code away!
 
