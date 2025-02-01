@@ -1,7 +1,7 @@
 # Performance Fun
 Welcome to the thunderdome of performance! This repo will host all of our good, bad, and ugly code. The goal of this repo is to write the most performant code you can write all while learning from each others mistakes... everyone will make them.
 
-In all seriousness, this is all about learning Deno and having some fun with the new JS runtime. It has loads of things built in that Node doesn't (linter, benchmarking, test runners, supports TypeScript directly, Jupyter, etc.) and is backwards compatible with npm. So use the entire npm ecosystem to your advantage, if you think it will help 🙃. 
+In all seriousness, this is all about learning Deno and having some fun with the new JS runtime. It has loads of things built in that Node doesn't (linter, benchmarking, test runners, telemetry, direct TypeScript support, Jupyter Notebooks, and more) and is backwards compatible with the npm ecosystem. With that in mind, use the entire npm ecosystem to your advantage, if you think it will help 🙃. 
 
 ## Setup 
 1. Install [Deno](https://docs.deno.com/runtime/).
