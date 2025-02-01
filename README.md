@@ -11,7 +11,7 @@ In all seriousness, this is all about learning Deno and having some fun with the
 
 
 ## Rules
-1. Only TypeScript is allowed! (none of that Python and SQL nonsense)
+1. Only TypeScript is allowed! (none of that Python and SQL nonsense... for now)
 2. Don't delete anyone elses code (edit your files only)!
 3. Use any third-party package your ❤️ desires.
 4. AI is allowed.
