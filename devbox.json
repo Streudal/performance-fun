@@ -1,0 +1,9 @@
+{
+  "packages": {
+    "deno": "latest"
+  },
+  "shell": {
+    "init_hook": [],
+    "scripts": {}
+  }
+}

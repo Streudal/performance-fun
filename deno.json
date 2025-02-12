@@ -1,8 +1,10 @@
 {
   "tasks": {
-    "dev": "deno run --watch main.ts"
+    "test": "deno run --allow-read --quiet src/contestants/**/challenge-1_bench.ts |& deno run ./main.ts",
+    "bench:challenge-1": "deno bench --allow-read --quiet src/contestants/**/challenge-1_bench.ts"
   },
   "imports": {
-    "@std/assert": "jsr:@std/assert@1"
+    "@faker-js/faker": "npm:@faker-js/faker@^9.4.0",
+    "@std/fs": "jsr:@std/fs@^1.0.11"
   }
 }
