@@ -103,7 +103,7 @@ await challenge1();
  * You can run your benchmark using:
  * `deno bench <path_to_file>`
  */
-Deno.bench({
+export default Deno.bench({
   group: 'Challenge 1',
   name: 'AI - Claude 3.5 Sonnet',
   baseline: true,

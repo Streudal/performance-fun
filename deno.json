@@ -1,7 +1,6 @@
 {
   "tasks": {
-    "test": "deno run --allow-read --quiet src/contestants/**/challenge-1_bench.ts |& deno run ./main.ts",
-    "bench:challenge-1": "deno bench --allow-read --quiet src/contestants/**/challenge-1_bench.ts"
+    "bench:challenge-1": "deno bench --allow-read --quiet src/benches/all-challenge-1_bench.ts"
   },
   "imports": {
     "@faker-js/faker": "npm:@faker-js/faker@^9.4.0",

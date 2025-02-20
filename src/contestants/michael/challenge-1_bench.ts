@@ -12,7 +12,6 @@
  * - Fall within a price range of: $50 - $150
  */
 
-import { registerBenchmark } from "../../lib/utils.ts";
 
 
 /**
@@ -37,11 +36,8 @@ function challenge1() {
  * You can run your benchmark using:
  * `deno bench <path_to_file>`
  */
-const benchOptions: Deno.BenchDefinition = {
+export default Deno.bench({
   group: 'Challenge 1',
   name: 'Michael',
   fn: challenge1, // Your function for the benchmark must return a Promise<void> | void so this doesn't error.
-}
-
-Deno.bench(benchOptions);
-registerBenchmark(benchOptions);
+});

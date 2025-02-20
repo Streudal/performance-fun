@@ -35,7 +35,7 @@ function challenge1() {
  * You can run your benchmark using:
  * `deno bench <path_to_file>`
  */
-Deno.bench({
+export default Deno.bench({
   group: 'Challenge 1',
   name: 'Zack',
   fn: challenge1, // Your function for the benchmark must return a Promise<void> | void so this doesn't error.
