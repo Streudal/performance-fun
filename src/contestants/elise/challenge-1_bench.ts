@@ -11,13 +11,30 @@
  * - Have the tag: 'organic'
  * - Fall within a price range of: $50 - $150
  */
+ function getJson(filePath: string) {
+  return Deno.readTextFile(filePath);
+}
 
-
+const TAG_TYPE = "organic";
+const CATEGORY_TYPE = "Food & Beverages";
+const MIN_PRICE = 50;
+const MAX_PRICE = 150;
 /**
- * EXPLAIN YOUR APPROACH AND METHODS HERE
+ * Get raw JSON data then parse
+ * Filter to find category type, tags, and price
+ * Log out the length of the filtered data
  */
-function challenge1() {
+async function challenge1() {
   // your code goes here but feel free to create other functions outside of this if neded (helpers, utils, etc.)
+  const file_data = await getJson('src/assets/challenge-1/challenge-1-product-catalog.json');
+  const products = await JSON.parse(file_data);
+  const filt_products = products.filter(
+    item => (item['tags'].includes(TAG_TYPE.toLowerCase()) 
+    && item['category'].toLowerCase() == CATEGORY_TYPE.toLowerCase() 
+    && item['price'] >= MIN_PRICE && item['price'] <= MAX_PRICE
+    ) );
+
+  console.log('There are', filt_products.length, 'products that have in category Food & Beverage, have the tag organic, and are priced between $50-$150.');
 }
 
 
@@ -26,7 +43,7 @@ function challenge1() {
  */
 // await challenge1();
 // OR
-// challenge1();
+challenge1();
 
 
 /**
