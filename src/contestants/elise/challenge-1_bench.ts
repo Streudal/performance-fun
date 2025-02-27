@@ -11,7 +11,31 @@
  * - Have the tag: 'organic'
  * - Fall within a price range of: $50 - $150
  */
- function getJson(filePath: string) {
+
+type dimensions = {
+  length: number;
+  width: number;
+  height: number;
+}
+
+type product_type = {
+  id: number;
+  name: string;
+  description: string;
+  category: string;
+  price: number;
+  tags: string[],
+  manufacturer: string;
+  sku: string;
+  stockQuantity: number;
+  dateAdded: string;
+  rating: number;
+  reviews: number;
+  dimensions: dimensions,
+  weight: number;
+}
+
+function getJson(filePath: string) {
   return Deno.readTextFile(filePath);
 }
 
@@ -29,12 +53,12 @@ async function challenge1() {
   const file_data = await getJson('src/assets/challenge-1/challenge-1-product-catalog.json');
   const products = await JSON.parse(file_data);
   const filt_products = products.filter(
-    item => (item['tags'].includes(TAG_TYPE.toLowerCase()) 
+    (item: product_type)  => (item['tags'].includes(TAG_TYPE.toLowerCase()) 
     && item['category'].toLowerCase() == CATEGORY_TYPE.toLowerCase() 
     && item['price'] >= MIN_PRICE && item['price'] <= MAX_PRICE
     ) );
 
-  console.log('There are', filt_products.length, 'products that have in category Food & Beverage, have the tag organic, and are priced between $50-$150.');
+  console.log('There are', filt_products.length, 'products that match.');
 }
 
 
