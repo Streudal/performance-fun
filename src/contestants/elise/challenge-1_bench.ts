@@ -35,10 +35,6 @@ type product_type = {
   weight: number;
 }
 
-function getJson(filePath: string) {
-  return Deno.readTextFile(filePath);
-}
-
 const TAG_TYPE = "organic";
 const CATEGORY_TYPE = "Food & Beverages";
 const MIN_PRICE = 50;
@@ -48,10 +44,11 @@ const MAX_PRICE = 150;
  * Filter to find category type, tags, and price
  * Log out the length of the filtered data
  */
-async function challenge1() {
+function challenge1() {
   // your code goes here but feel free to create other functions outside of this if neded (helpers, utils, etc.)
-  const file_data = await getJson('src/assets/challenge-1/challenge-1-product-catalog.json');
-  const products = await JSON.parse(file_data);
+  //const file_data = await Deno.readTextFile('src/assets/challenge-1/challenge-1-product-catalog.json'); 
+  const file_data  = Deno.readTextFileSync('src/assets/challenge-1/challenge-1-product-catalog.json');
+  const products = JSON.parse(file_data);
   const filt_products = products.filter(
     (item: product_type)  => (item['tags'].includes(TAG_TYPE.toLowerCase()) 
     && item['category'].toLowerCase() == CATEGORY_TYPE.toLowerCase() 
