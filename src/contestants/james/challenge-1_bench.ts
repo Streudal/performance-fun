@@ -40,6 +40,29 @@ function challenge1() {
   console.log(`Average price of matches: ${(filteredProducts.reduce((a, b) => a + b, 0) / count).toFixed(2)}`);
 }
 
+//faster solution with ai help
+/**function challenge1() {
+  const cat = 'Food & Beverages', tag = 'organic';
+  const min = 50, max = 150;
+  let count = 0, sum = 0;
+
+  for (let i = 0, p; i < products.length; i++) {
+    p = products[i];
+    const price = p.price;
+    if (
+      p.category === cat &&
+      price > min && price < max &&
+      p.tags.includes(tag)
+    ) {
+      sum += price;
+      count++;
+    }
+  }
+
+  console.log(`found ${count} matching products.`);
+  console.log(`Average price of matches: ${(sum / count).toFixed(2)}`);
+}
+*/
 
 /**
  * Test your logic by calling the function.
