@@ -13,7 +13,7 @@
  */
 
 // Constants
-const DATA_FILE = '../../assets/challenge-1/challenge-1-product-catalog.json';
+const DATA_FILE = 'src/assets/challenge-1/challenge-1-product-catalog.json';
 const CATEGORY = 'Food & Beverages';
 const TAG = 'organic';
 const MIN_PRICE = 50;
