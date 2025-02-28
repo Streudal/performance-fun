@@ -35,10 +35,12 @@ type product_type = {
   weight: number;
 }
 
+const FILE_PATH = 'src/assets/challenge-1/challenge-1-product-catalog.json';
 const TAG_TYPE = "organic";
 const CATEGORY_TYPE = "Food & Beverages";
 const MIN_PRICE = 50;
 const MAX_PRICE = 150;
+
 /**
  * Get raw JSON data then parse
  * Filter to find category type, tags, and price
@@ -47,7 +49,7 @@ const MAX_PRICE = 150;
 function challenge1() {
   // your code goes here but feel free to create other functions outside of this if neded (helpers, utils, etc.)
   //const file_data = await Deno.readTextFile('src/assets/challenge-1/challenge-1-product-catalog.json'); 
-  const file_data  = Deno.readTextFileSync('src/assets/challenge-1/challenge-1-product-catalog.json');
+  const file_data  = Deno.readTextFileSync(FILE_PATH);
   const products = JSON.parse(file_data);
   const filt_products = products.filter(
     (item: product_type)  => (item['tags'].includes(TAG_TYPE.toLowerCase()) 
